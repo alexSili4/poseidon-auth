@@ -4,15 +4,15 @@
       <h1 class="sign-in-form-title">Вхід</h1>
       <form class="sign-in-form">
         <input type="hidden" name="" />
-        <div class="form-group required sign-in-form-email-input-wrap">
-          <label class="control-label sign-in-form-email-input-label">Номер телефону або Email</label>
-          <input class="sign-in-form-email-input" type="text" placeholder="Введіть номер телефону або Email" name="email" />
+        <div class="form-group required sign-in-form-input-wrap email">
+          <label class="control-label sign-in-form-input-label email">Номер телефону або Email</label>
+          <input class="sign-in-form-input email" type="text" placeholder="Введіть номер телефону або Email" name="email" />
           <div class="help-block"></div>
         </div>
-        <div class="form-group required sign-in-form-password-input-wrap">
-          <label class="control-label sign-in-form-password-input-label">Пароль</label>
-          <input class="sign-in-form-password-input" type="text" placeholder="Введіть ваш пароль" name="password" />
-          <div class="help-block"></div>
+        <div class="form-group required has-error sign-in-form-input-wrap password">
+          <label class="control-label sign-in-form-input-label password">Пароль</label>
+          <input class="sign-in-form-input password" type="text" placeholder="Введіть ваш пароль" name="password" />
+          <div class="help-block">Помилка</div>
           <button type="button" class="sign-in-form-toggle-show-password-btn">
             <svg class="sign-in-form-show-password-icon">
               <use href="/icons/icons.svg#show-password"></use>
