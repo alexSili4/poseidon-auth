@@ -1,4 +1,5 @@
 .auth-form-footer {
+  align-content: flex-end;
   padding-top: 20px;
   padding-bottom: 20px;
   outline: 1px solid green;

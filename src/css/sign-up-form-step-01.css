@@ -1,0 +1,120 @@
+.auth-form {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 296px;
+  margin-top: 16px;
+}
+
+.auth-form-input-labels-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-form-input-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.auth-form-input-title {
+  color: #7e8494;
+  font-family: Geologica;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.auth-form-input-wrap {
+  position: relative;
+}
+
+.auth-form-input {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid;
+  border-color: #e6e9eb;
+  border-radius: 8px;
+  background-color: var(--white-color);
+  outline: none;
+  transition: border-color var(--transition-duration-and-func);
+}
+
+.auth-form-input:not(:disabled):is(:hover, :focus) {
+  border-color: #4289fe;
+}
+
+.auth-form-input:disabled {
+  background-color: #f4f6f9;
+}
+
+.auth-form-input-label:has(.auth-form-input:disabled) .auth-form-input-title {
+  color: #bcc3d3;
+}
+
+.auth-form-input-btn {
+  position: absolute;
+}
+
+.auth-form-input-btn.access-phone {
+  top: 50%;
+  right: 20px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: #4289fe;
+  font-family: Geologica;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  transition: color var(--transition-duration-and-func);
+  transform: translateY(-50%);
+}
+
+.auth-form-input-btn.access-phone:disabled {
+  color: #9fa8bd;
+}
+
+.access-phone {
+}
+
+.auth-form-input-error {
+  position: absolute;
+}
+
+.auth-form-inputs-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.sms-code {
+}
+
+.auth-form-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 56px;
+  border-radius: 10px;
+  border: none;
+  padding: 0;
+  background-image: linear-gradient(236.31deg, rgb(54, 111, 255) -35.899%, rgb(89, 188, 251) 185.051%);
+  color: var(--white-color);
+  font-family: Geologica;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: auto;
+}
+
+.auth-form-submit-btn:disabled {
+  background-image: linear-gradient(0deg, #bcc3d3 0%, #bcc3d3 100%);
+}

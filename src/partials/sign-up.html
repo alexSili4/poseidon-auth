@@ -1,9 +1,14 @@
 <section class="auth-section">
   <h1 class="hidden-element">Сторінка аутентифікації</h1>
-  <div class="auth-container">
+  <div class="auth-section-wrap">
     <div class="auth-form-container">
       <load src="/partials/auth-form-header.html" />
-      <load src="/partials/sign-up-form-content.html" />
+      <div class="container auth-container">
+        <h2 class="auth-form-title">Реєстрація</h2>
+        <load src="/partials/sign-up-form-steps-list.html" />
+        <load src="/partials/sign-up-form-step-01.html" />
+        <a class="auth-form-account-link" href="/">У мене є акаунт</a>
+      </div>
       <load src="/partials/auth-form-footer.html" />
     </div>
     <load src="/partials/decorative-auth-block.html" />
