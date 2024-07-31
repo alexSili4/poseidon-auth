@@ -1,0 +1,53 @@
+.auth-form-steps-list-wrap {
+  margin-top: 8px;
+  padding-top: 16px;
+  padding-bottom: 39px;
+  outline: 1px solid red;
+}
+
+.auth-form-steps-progress-wrap {
+  position: relative;
+}
+
+.auth-form-steps-progress {
+}
+
+.auth-form-steps-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.auth-form-steps-list-item {
+}
+
+.auth-form-steps-marker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: linear-gradient(236.31deg, rgb(54, 111, 255) -58.506%, rgb(89, 188, 251) 134.237%);
+}
+
+.auth-form-steps-marker-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.auth-form-steps-marker-emptiness {
+}
+
+.auth-form-steps-marker-label {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  color: #2f3037;
+  font-family: Geologica;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  transform: translateX(-50%);
+}

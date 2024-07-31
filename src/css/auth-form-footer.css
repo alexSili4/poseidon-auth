@@ -1,0 +1,15 @@
+.auth-form-footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  outline: 1px solid green;
+}
+
+.auth-form-footer-text {
+  color: #7e8494;
+  font-family: Geologica;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 150%;
+  letter-spacing: 0px;
+  text-align: center;
+}

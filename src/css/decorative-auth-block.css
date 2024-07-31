@@ -1,0 +1,21 @@
+.decorative-auth-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  min-height: 100%;
+  border-radius: 10px;
+  background-color: #f4f6f9;
+}
+
+.decorative-auth-block-img {
+  width: 100%;
+  height: 323px;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1439px) {
+  .decorative-auth-block {
+    display: none;
+  }
+}

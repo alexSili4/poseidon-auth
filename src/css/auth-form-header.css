@@ -1,0 +1,15 @@
+.auth-form-header {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  outline: 1px solid blue;
+}
+
+.auth-form-header-link {
+  display: block;
+}
+
+.auth-form-header-link-icon {
+  display: block;
+  width: 96px;
+  height: 21px;
+}

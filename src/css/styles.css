@@ -3,4 +3,9 @@
 @import url('./fonts.css');
 @import url('./utilities.css');
 @import url('./variables.css');
-@import url('./sign-in.css');
+@import url('./sign-up.css');
+@import url('./decorative-auth-block.css');
+@import url('./auth-form-header.css');
+@import url('./auth-form-footer.css');
+@import url('./sign-up-form-content.css');
+@import url('./auth-form-steps-list.css');
