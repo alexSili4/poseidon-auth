@@ -6,32 +6,33 @@ import FullReload from 'vite-plugin-full-reload';
 export default defineConfig({
   root: 'src',
   build: {
+    minify: false,
     rollupOptions: {
       input: glob.sync('./src/*.html'),
       output: {
         // Настройка для вывода файлов в разные папки
         assetFileNames: (assetInfo) => {
           if (assetInfo.name.endsWith('.css')) {
-            return 'css/[name]-[hash][extname]';
+            return 'css/[name][extname]';
           }
           if (assetInfo.name.endsWith('.js')) {
-            return 'js/[name]-[hash][extname]';
+            return 'js/[name][extname]';
           }
           if (assetInfo.name.endsWith('.svg')) {
-            return 'icons/[name]-[hash][extname]';
+            return 'icons/[name][extname]';
           }
           if (assetInfo.name.endsWith('.ttf')) {
-            return 'fonts/[name]-[hash][extname]';
+            return 'fonts/[name][extname]';
           }
           if (assetInfo.name.endsWith('.png')) {
-            return 'images/[name]-[hash][extname]';
+            return 'images/[name][extname]';
           }
           // Настройка для других файлов, если необходимо
-          return 'assets/[name]-[hash][extname]';
+          return 'assets/[name][extname]';
         },
         // Настройка для вывода файлов JavaScript
-        chunkFileNames: 'js/[name]-[hash].js',
-        entryFileNames: 'js/[name]-[hash].js',
+        chunkFileNames: 'js/[name].js',
+        entryFileNames: 'js/[name].js',
       },
     },
     outDir: '../dist',

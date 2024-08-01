@@ -12,3 +12,16 @@
   width: 96px;
   height: 21px;
 }
+
+@media screen and (min-width: 1440px) {
+  .auth-form-header {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .auth-form-header-link-icon {
+    display: block;
+    width: 130px;
+    height: 29px;
+  }
+}

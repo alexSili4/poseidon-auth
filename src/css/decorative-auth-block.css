@@ -1,9 +1,10 @@
 .decorative-auth-block {
+  flex-shrink: 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 50%;
-  min-height: 100%;
   border-radius: 10px;
   background-color: #f4f6f9;
 }

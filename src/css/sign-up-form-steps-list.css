@@ -41,9 +41,6 @@
   gap: 92px;
 }
 
-.sign-up-form-steps-list-item {
-}
-
 .sign-up-form-steps-marker {
   position: relative;
   display: flex;
@@ -60,11 +57,6 @@
   background-size: 16px 16px, 100% 100%;
   background-position: top 50% left 50%, 0 0;
   background-repeat: no-repeat;
-}
-
-.sign-up-form-steps-marker-icon {
-  width: 16px;
-  height: 16px;
 }
 
 .sign-up-form-steps-marker-emptiness {
@@ -98,4 +90,30 @@
 
 .sign-up-form-steps-list-item.current .sign-up-form-steps-marker-label {
   color: #2f3037;
+}
+
+@media screen and (min-width: 1440px) {
+  .sign-up-form-steps-list-wrap {
+    margin-top: 48px;
+  }
+
+  .sign-up-form-steps-progress {
+    width: 447px;
+  }
+
+  .sign-up-form-steps-progress-wrap:has(.sign-up-form-steps-list-item.current:nth-child(1)) .sign-up-form-steps-progress {
+    background-size: 15% 100%;
+  }
+
+  .sign-up-form-steps-progress-wrap:has(.sign-up-form-steps-list-item.current:nth-child(2)) .sign-up-form-steps-progress {
+    background-size: 50% 100%;
+  }
+
+  .sign-up-form-steps-progress-wrap:has(.sign-up-form-steps-list-item.current:nth-child(3)) .sign-up-form-steps-progress {
+    background-size: 100% 100%;
+  }
+
+  .sign-up-form-steps-list {
+    gap: 129px;
+  }
 }
