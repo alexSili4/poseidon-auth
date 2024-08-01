@@ -1,6 +1,9 @@
+import changeSmsCode from './changeSmsCode';
+import checkFullSmsCode from './checkFullSmsCode';
+import getFullSmsCode from './getFullSmsCode';
 import refs from './refs';
 
-const smsCodeSymbols = [];
+const smsCodeSymbols = {};
 
 refs.smsCodeInputs.forEach((input, index) => {
   input.addEventListener('input', (e) => onSmsCodeInputChange({ e, index }));
@@ -9,11 +12,12 @@ refs.smsCodeInputs.forEach((input, index) => {
 
 function onSmsCodeInputChange({ e, index }) {
   const { value } = e.currentTarget;
-  const lastInputIndex = refs.smsCodeInputs.length - 1;
-  const shouldChangeFocusToNextInput = value.length && index < lastInputIndex;
+  changeSmsCode({ value, smsCodeSymbols, inputIndex: index });
 
-  if (shouldChangeFocusToNextInput) {
-    refs.smsCodeInputs[index + 1].focus();
+  const { fullSmsCode, isFullSmsCode } = getFullSmsCode({ smsCodeSymbols, targetLength: refs.smsCodeInputs.length });
+
+  if (isFullSmsCode) {
+    checkFullSmsCode(fullSmsCode);
   }
 }
 
