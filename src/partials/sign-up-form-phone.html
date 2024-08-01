@@ -2,21 +2,22 @@
   <div class="auth-form-labels-wrap">
     <label class="auth-form-input-label">
       <span class="auth-form-input-title">Номер телефону</span>
-      <span class="auth-form-input-wrap">
-        <input type="text" name="SUP1[phone]" class="auth-form-input phone" required />
-        <button type="button" class="auth-form-input-btn access-phone" disabled>Підтвердити</button>
+      <span class="auth-form-input-wrap invalidd">
+        <input type="text" name="SUP1[phone]" class="auth-form-input phone js-auth-form-input-phone" required />
+        <span class="auth-form-input-phone-prefix js-auth-form-input-phone-prefix">+380</span>
+        <button type="button" class="auth-form-input-btn confirm-phone js-sign-up-form-confirm-phone-btn" disabled>Підтвердити</button>
+        <span class="auth-form-input-error">Помилка</span>
       </span>
-      <span class="auth-form-input-error"></span>
     </label>
     <label class="auth-form-input-label">
       <span class="auth-form-input-title">Код з СМС</span>
-      <span class="auth-form-inputs-wrap">
+      <span class="auth-form-input-wrap many invalidd">
         <input type="text" maxlength="1" name="SUP1[sms_code]" class="auth-form-input sms-code js-sign-up-form-input-sms-code" required disabled />
         <input type="text" maxlength="1" name="SUP1[sms_code]" class="auth-form-input sms-code js-sign-up-form-input-sms-code" required disabled />
         <input type="text" maxlength="1" name="SUP1[sms_code]" class="auth-form-input sms-code js-sign-up-form-input-sms-code" required disabled />
         <input type="text" maxlength="1" name="SUP1[sms_code]" class="auth-form-input sms-code js-sign-up-form-input-sms-code" required disabled />
+        <span class="auth-form-input-error">помилка</span>
       </span>
-      <span class="auth-form-input-error"></span>
     </label>
   </div>
   <button type="submit" class="auth-form-submit-btn" disabled>Далі</button>

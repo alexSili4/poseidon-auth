@@ -1,2 +1,3 @@
 import '/js/refs';
-import '/js/smsCodeEntering';
+import '/js/eventHandlers';
+import '/js/mask';

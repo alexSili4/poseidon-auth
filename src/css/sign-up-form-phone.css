@@ -10,7 +10,7 @@
 .auth-form-labels-wrap {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 24px;
 }
 
 .auth-form-input-label {
@@ -31,6 +31,13 @@
   position: relative;
 }
 
+.auth-form-input-wrap.many {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
 .auth-form-input {
   display: block;
   width: 100%;
@@ -42,11 +49,33 @@
   border-radius: 8px;
   background-color: var(--white-color);
   outline: none;
+  color: #2f3037;
+  font-family: Geologica;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
   transition: border-color var(--transition-duration-and-func);
 }
 
+.auth-form-input-wrap.invalid > .auth-form-input {
+  border-color: #ff613f;
+}
+
 .auth-form-input.phone {
+  padding-left: 64px;
   padding-right: 120px;
+}
+
+.auth-form-input-phone-prefix {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  color: #7e8494;
+  font-family: Geologica;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  transform: translateY(-50%);
 }
 
 .auth-form-input.sms-code {
@@ -69,7 +98,7 @@
   position: absolute;
 }
 
-.auth-form-input-btn.access-phone {
+.auth-form-input-btn.confirm-phone {
   top: 50%;
   right: 20px;
   padding: 0;
@@ -84,19 +113,25 @@
   transform: translateY(-50%);
 }
 
-.auth-form-input-btn.access-phone:disabled {
+.auth-form-input-btn.confirm-phone:disabled {
   color: #9fa8bd;
 }
 
 .auth-form-input-error {
   position: absolute;
+  top: calc(100% + 4px);
+  left: 0px;
+  color: #ff613f;
+  font-family: Geologica;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 0;
+  transition: opacity var(--transition-duration-and-func);
 }
 
-.auth-form-inputs-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+.auth-form-input-wrap.invalid > .auth-form-input-error {
+  opacity: 1;
 }
 
 .auth-form-submit-btn {
@@ -128,5 +163,14 @@
 
   .auth-form-input {
     height: 56px;
+    font-size: 16px;
+  }
+
+  .auth-form-input-phone-prefix {
+    font-size: 16px;
+  }
+
+  .auth-form-input.phone {
+    padding-left: 69px;
   }
 }
