@@ -1,1 +1,2 @@
-console.log('hello');
+import '/js/refs';
+import '/js/smsCodeEntering';
