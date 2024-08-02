@@ -30,8 +30,8 @@
 <path fill="none" stroke="#bcc3d3" style="stroke: var(--color1, #bcc3d3)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.56" d="M12.104 20.665l-1.108 2.879"></path>
 <path fill="none" stroke="#bcc3d3" style="stroke: var(--color1, #bcc3d3)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.56" d="M18.616 20.665l1.108 2.879"></path>
 </symbol>
-<symbol id="step-check" viewBox="0 0 32 32">
-<path fill="none" stroke="#f4f6f9" style="stroke: var(--color1, #f4f6f9)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.8235" d="M21.333 13.060l-7.529 7.529-3.765-3.765"></path>
+<symbol id="input-check" viewBox="0 0 31 32">
+<path fill="none" stroke="#4289fe" style="stroke: var(--color1, #4289fe)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.56" d="M19.2 14.001l-5.12 5.12-2.56-2.56M15.36 28.081c-6.362 0-11.52-5.158-11.52-11.52s5.158-11.52 11.52-11.52c6.362 0 11.52 5.158 11.52 11.52s-5.158 11.52-11.52 11.52z"></path>
 </symbol>
 </defs>
 </svg>

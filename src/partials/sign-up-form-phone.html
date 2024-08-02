@@ -2,23 +2,26 @@
   <div class="auth-form-labels-wrap">
     <label class="auth-form-input-label">
       <span class="auth-form-input-title">Номер телефону</span>
-      <span class="auth-form-input-wrap invalidd">
+      <span class="auth-form-input-wrap invalidd checkk js-sign-up-form-input-phone-wrap">
         <input type="text" name="SUP1[phone]" class="auth-form-input phone js-auth-form-input-phone" required />
         <span class="auth-form-input-phone-prefix js-auth-form-input-phone-prefix">+380</span>
         <button type="button" class="auth-form-input-btn confirm-phone js-sign-up-form-confirm-phone-btn" disabled>Підтвердити</button>
-        <span class="auth-form-input-error">Помилка</span>
+        <span class="auth-form-input-error js-sign-up-form-input-phone-error">Помилка</span>
+        <svg class="auth-form-input-check-icon phone">
+          <use href="/icons/icons.svg#input-check"></use>
+        </svg>
       </span>
     </label>
     <label class="auth-form-input-label">
       <span class="auth-form-input-title">Код з СМС</span>
-      <span class="auth-form-input-wrap many invalidd">
-        <input type="text" maxlength="1" name="SUP1[sms_code]" class="auth-form-input sms-code js-sign-up-form-input-sms-code" required disabled />
-        <input type="text" maxlength="1" name="SUP1[sms_code]" class="auth-form-input sms-code js-sign-up-form-input-sms-code" required disabled />
-        <input type="text" maxlength="1" name="SUP1[sms_code]" class="auth-form-input sms-code js-sign-up-form-input-sms-code" required disabled />
-        <input type="text" maxlength="1" name="SUP1[sms_code]" class="auth-form-input sms-code js-sign-up-form-input-sms-code" required disabled />
-        <span class="auth-form-input-error">помилка</span>
+      <span class="auth-form-input-wrap many invalidd checkk js-sign-up-sms-code-input-phone-wrap">
+        <input type="text" maxlength="1" name="SUP1[sms_code]" class="auth-form-input sms-code js-sign-up-form-input-sms-code" required />
+        <input type="text" maxlength="1" name="SUP1[sms_code]" class="auth-form-input sms-code js-sign-up-form-input-sms-code" required />
+        <input type="text" maxlength="1" name="SUP1[sms_code]" class="auth-form-input sms-code js-sign-up-form-input-sms-code" required />
+        <input type="text" maxlength="1" name="SUP1[sms_code]" class="auth-form-input sms-code js-sign-up-form-input-sms-code" required />
+        <span class="auth-form-input-error js-sign-up-form-input-sms-code-error">помилка</span>
       </span>
     </label>
   </div>
-  <button type="submit" class="auth-form-submit-btn" disabled>Далі</button>
+  <button type="button" class="auth-form-btn next js-sign-up-form-phone-next" disabled>Далі</button>
 </form>

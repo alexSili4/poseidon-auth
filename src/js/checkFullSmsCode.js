@@ -1,12 +1,12 @@
-import refs from './refs';
-import constants from './constants';
+import toggleSmsCodeInputsDisabled from './toggleSmsCodeInputsDisabled';
+import fetchSmsCodeConfirm from './fetchSmsCodeConfirm';
 
-const checkSmsCode = (smsCode) => {
-  refs.smsCodeInputs.forEach((input) => {
-    input.setAttribute(constants.disabledAttributeName, '');
-  });
+const checkSmsCode = async (smsCode) => {
+  toggleSmsCodeInputsDisabled();
 
-  console.log(smsCode);
+  const data = { sms_code: smsCode };
+
+  fetchSmsCodeConfirm(data);
 };
 
 export default checkSmsCode;
