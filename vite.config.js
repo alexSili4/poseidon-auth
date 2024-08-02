@@ -6,7 +6,7 @@ import FullReload from 'vite-plugin-full-reload';
 export default defineConfig({
   root: 'src',
   build: {
-    // minify: false,
+    minify: false,
     rollupOptions: {
       input: glob.sync('./src/*.html'),
       output: {
@@ -15,7 +15,7 @@ export default defineConfig({
             return 'css/[name][extname]';
           }
           if (assetInfo.name.endsWith('.js')) {
-            return 'js/[name][extname]';
+            return 'js/script[extname]';
           }
           if (assetInfo.name.endsWith('.svg')) {
             return 'icons/[name][extname]';
@@ -28,8 +28,8 @@ export default defineConfig({
           }
           return 'assets/[name][extname]';
         },
-        chunkFileNames: 'js/[name].js',
-        entryFileNames: 'js/[name].js',
+        chunkFileNames: 'js/script.js',
+        entryFileNames: 'js/script.js',
       },
     },
     outDir: '../dist',

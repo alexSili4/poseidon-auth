@@ -14,12 +14,17 @@ const fetchSmsCodeConfirm = async (data) => {
 
   try {
     const response = await fetch(url, options);
-    const data = await response.json();
-    console.log(data);
+
+    if (!response.ok) {
+      const error = await response.json();
+      const errorMessage = error[0].message;
+
+      throw new Error(errorMessage);
+    }
+
     toggleDisabledBtn(refs.phoneFormNextBtn);
   } catch (error) {
-    console.log(error);
-    refs.smsCodeError.textContent = 'some error';
+    refs.smsCodeError.textContent = error.message;
     refs.smsCodeInputWrap.classList.add(constants.invalidClassName);
   }
 };

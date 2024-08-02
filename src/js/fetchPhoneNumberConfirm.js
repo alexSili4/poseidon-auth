@@ -1,4 +1,6 @@
 import constants from './constants';
+import localStorage from './localStorage';
+import localStorageKeys from './localStorageKeys';
 import refs from './refs';
 import setResendPhoneNumberInterval from './setResendPhoneNumberInterval';
 import toggleSmsCodeInputsDisabled from './toggleSmsCodeInputsDisabled';
@@ -14,14 +16,22 @@ const fetchPhoneNumberConfirm = async (data) => {
   };
 
   try {
-    // const response = await fetch(url, options);
-    // const data = await response.json();
-    // console.log(data);
-    // toggleSmsCodeInputsDisabled();
+    const response = await fetch(url, options);
+
+    if (!response.ok) {
+      const error = await response.json();
+      const errorMessage = error[0].message;
+
+      throw new Error(errorMessage);
+    }
+
+    const { phone } = await response.json();
+    toggleSmsCodeInputsDisabled();
     setResendPhoneNumberInterval();
+    localStorage.save({ key: localStorageKeys.phone, value: phone });
+    refs.phoneInputWrap.classList.remove(constants.invalidClassName);
   } catch (error) {
-    console.log(error);
-    refs.phoneError.textContent = 'some error';
+    refs.phoneError.textContent = error.message;
     refs.phoneInputWrap.classList.add(constants.invalidClassName);
   }
 };
