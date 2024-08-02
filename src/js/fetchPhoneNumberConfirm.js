@@ -17,8 +17,7 @@ const fetchPhoneNumberConfirm = async (data) => {
     // const response = await fetch(url, options);
     // const data = await response.json();
     // console.log(data);
-    toggleSmsCodeInputsDisabled();
-    // setResendPhoneNumberInterval();
+    // toggleSmsCodeInputsDisabled();
     setResendPhoneNumberInterval();
   } catch (error) {
     console.log(error);

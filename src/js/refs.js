@@ -9,6 +9,8 @@ const refs = {
   phoneInputPrefix: document.querySelector('.js-auth-form-input-phone-prefix'),
   confirmPhoneNumberBtn: document.querySelector('.js-sign-up-form-confirm-phone-btn'),
   phoneFormNextBtn: document.querySelector('.js-sign-up-form-phone-next'),
+  resendPhoneTimeout: document.querySelector('.js-sign-up-form-resend-phone-timeout'),
+  resendPhoneTimeoutTime: document.querySelector('.js-sign-up-form-resend-phone-timeout-time'),
 };
 
 export default refs;

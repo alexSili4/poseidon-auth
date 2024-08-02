@@ -7,9 +7,11 @@ const smsCodeSymbols = {};
 
 function onSmsCodeInputChange({ e, index }) {
   const { value } = e.currentTarget;
+  const targetLength = refs.smsCodeInputs.length;
+
   changeSmsCode({ value, smsCodeSymbols, inputIndex: index });
 
-  const { fullSmsCode, isFullSmsCode } = getFullSmsCode({ smsCodeSymbols, targetLength: refs.smsCodeInputs.length });
+  const { fullSmsCode, isFullSmsCode } = getFullSmsCode({ smsCodeSymbols, targetLength });
 
   if (isFullSmsCode) {
     checkFullSmsCode(fullSmsCode);

@@ -160,6 +160,27 @@
   opacity: 1;
 }
 
+.auth-form-resend-phone-timeout {
+  top: calc(100% + 4px);
+  left: 0;
+  position: absolute;
+  color: #4289fe;
+  font-family: Geologica;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 2.2;
+  opacity: 0;
+  transition: transform var(--transition-duration-and-func), opacity var(--transition-duration-and-func);
+}
+
+.auth-form-resend-phone-timeout.show {
+  opacity: 1;
+}
+
+.auth-form-input-wrap.invalid > .auth-form-resend-phone-timeout.show {
+  transform: translateY(12px);
+}
+
 .auth-form-btn {
   display: flex;
   align-items: center;
@@ -198,5 +219,13 @@
 
   .auth-form-input.phone {
     padding-left: 69px;
+  }
+
+  .auth-form-resend-phone-timeout {
+    line-height: 1.5;
+  }
+
+  .auth-form-input-wrap.invalid > .auth-form-resend-phone-timeout.show {
+    transform: translateY(16px);
   }
 }

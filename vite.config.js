@@ -6,11 +6,10 @@ import FullReload from 'vite-plugin-full-reload';
 export default defineConfig({
   root: 'src',
   build: {
-    minify: false,
+    // minify: false,
     rollupOptions: {
       input: glob.sync('./src/*.html'),
       output: {
-        // Настройка для вывода файлов в разные папки
         assetFileNames: (assetInfo) => {
           if (assetInfo.name.endsWith('.css')) {
             return 'css/[name][extname]';
@@ -27,10 +26,8 @@ export default defineConfig({
           if (assetInfo.name.endsWith('.png')) {
             return 'images/[name][extname]';
           }
-          // Настройка для других файлов, если необходимо
           return 'assets/[name][extname]';
         },
-        // Настройка для вывода файлов JavaScript
         chunkFileNames: 'js/[name].js',
         entryFileNames: 'js/[name].js',
       },
