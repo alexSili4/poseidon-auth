@@ -43,5 +43,6 @@
 
   .auth-form-container {
     gap: 0px;
+    width: 50%;
   }
 }

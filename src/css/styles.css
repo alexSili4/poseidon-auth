@@ -8,4 +8,6 @@
 @import url('./auth-form-header.css');
 @import url('./auth-form-footer.css');
 @import url('./sign-up-form-steps-list.css');
+@import url('./sign-up-form.css');
 @import url('./sign-up-form-phone.css');
+@import url('./sign-up-form-email.css');

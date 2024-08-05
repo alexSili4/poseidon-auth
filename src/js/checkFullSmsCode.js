@@ -5,8 +5,8 @@ import localStorageKeys from './localStorageKeys';
 
 const checkSmsCode = async (smsCode) => {
   toggleSmsCodeInputsDisabled();
-  const phone = localStorage.load(localStorageKeys.phone);
 
+  const phone = localStorage.load(localStorageKeys.phone);
   const data = { SUP1: { sms_code: smsCode, phone } };
 
   fetchSmsCodeConfirm(data);

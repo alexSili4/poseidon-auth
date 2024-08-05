@@ -3,6 +3,8 @@ const constants = {
   disabledAttributeName: 'disabled',
   invalidClassName: 'invalid',
   timeoutClassName: 'js-timeout',
+  inputTextType: 'text',
+  inputPassType: 'password',
 };
 
 export default constants;

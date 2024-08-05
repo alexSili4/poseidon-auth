@@ -1,0 +1,30 @@
+.auth-form-input-btn.toggle-show-password {
+  display: block;
+  width: 24px;
+  height: 24px;
+  transition: opacity var(--transition-duration-and-func);
+}
+
+.auth-form-input-btn-icon.password {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 24px;
+  height: 24px;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+  color: greenyellow;
+}
+
+.auth-form-input-btn.toggle-show-password.show > .auth-form-input-btn-icon.password.hide {
+  opacity: 1;
+}
+
+.auth-form-input-btn.toggle-show-password:not(.show) > .auth-form-input-btn-icon.password.show {
+  opacity: 1;
+}
+
+.auth-form-input-wrap:not(.check).invalid > .auth-form-input-info.prompt {
+  transform: translateY(16px);
+}

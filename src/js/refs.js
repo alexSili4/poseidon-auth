@@ -1,6 +1,6 @@
 const refs = {
   signUpFormPhone: document.querySelector('.js-sign-up-form-phone'),
-  smsCodeInputWrap: document.querySelector('.js-sign-up-sms-code-input-phone-wrap'),
+  smsCodeInputWrap: document.querySelector('.js-sign-up-form-input-sms-code-wrap'),
   smsCodeInputs: document.querySelectorAll('.js-sign-up-form-input-sms-code'),
   smsCodeError: document.querySelector('.js-sign-up-form-input-sms-code-error'),
   phoneInputWrap: document.querySelector('.js-sign-up-form-input-phone-wrap'),
@@ -13,6 +13,9 @@ const refs = {
   resendPhoneTimeoutTime: document.querySelector('.js-sign-up-form-resend-phone-timeout-time'),
   signUpPhoneStep: document.querySelector('.js-sign-up-phone-step'),
   signUpEmailStep: document.querySelector('.js-sign-up-email-step'),
+  signUpFormToggleShowPassBtn: document.querySelector('.js-sign-up-form-toggle-show-password-btn'),
+  signUpFormInputPass: document.querySelector('.js-sign-up-form-input-password'),
+  signUpFormEmail: document.querySelector('.js-sign-up-form-email'),
 };
 
 export default refs;

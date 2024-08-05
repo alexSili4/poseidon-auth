@@ -1,3 +1,4 @@
+import gideSignUpFormPhone from './hideSignUpFormPhone';
 import localStorage from './localStorage';
 import localStorageKeys from './localStorageKeys';
 import refs from './refs';
@@ -15,7 +16,7 @@ const onPhoneFormNextBtnClick = (e) => {
 
   const data = { phone, smsCode };
   localStorage.save({ key: localStorageKeys.signUpFormPhone, value: data });
-  refs.signUpFormPhone.classList.add('display-none');
+  gideSignUpFormPhone();
 };
 
 export default onPhoneFormNextBtnClick;

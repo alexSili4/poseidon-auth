@@ -5,6 +5,8 @@ import onSmsCodeInputChange from './onSmsCodeInputChange';
 import onPhoneFormNextBtnClick from './onPhoneFormNextBtnClick';
 import refs from './refs';
 import onDomContentLoaded from './onDomContentLoaded';
+import onSignUpFormToggleShowPassBtnClick from './onSignUpFormToggleShowPassBtnClick';
+import onSignUpFormEmailInput from './onSignUpFormEmailInput';
 
 document.addEventListener('DOMContentLoaded', onDomContentLoaded);
 
@@ -18,3 +20,7 @@ refs.smsCodeInputs.forEach((input, index) => {
 refs.confirmPhoneNumberBtn.addEventListener('click', onConfirmPhoneNumberBtnClick);
 
 refs.phoneFormNextBtn.addEventListener('click', onPhoneFormNextBtnClick);
+
+refs.signUpFormToggleShowPassBtn.addEventListener('click', onSignUpFormToggleShowPassBtnClick);
+
+refs.signUpFormEmail.addEventListener('input', onSignUpFormEmailInput);

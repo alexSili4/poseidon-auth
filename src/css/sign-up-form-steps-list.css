@@ -15,7 +15,7 @@
   width: 336px;
   height: 1px;
   background-color: #bcc3d3;
-  background-image: linear-gradient(236.31deg, rgb(54, 111, 255) -34.819%, rgb(89, 188, 251) 187.48%);
+  background-image: linear-gradient(236.31deg, #366fff -34.819%, #59bcfb 187.48%);
   background-position: 0 0;
   background-size: 0% 100%;
   background-repeat: no-repeat;
@@ -53,7 +53,7 @@
 }
 
 .sign-up-form-steps-list-item.current .sign-up-form-steps-marker {
-  background-image: url('/icons/step-check.svg'), linear-gradient(236.31deg, rgb(54, 111, 255) -58.506%, rgb(89, 188, 251) 134.237%);
+  background-image: url('/icons/step-check.svg'), linear-gradient(236.31deg, #366fff -58.506%, #59bcfb 134.237%);
   background-size: 16px 16px, 100% 100%;
   background-position: top 50% left 50%, 0 0;
   background-repeat: no-repeat;
