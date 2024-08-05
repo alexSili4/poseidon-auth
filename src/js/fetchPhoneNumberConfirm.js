@@ -16,16 +16,18 @@ const fetchPhoneNumberConfirm = async (data) => {
   };
 
   try {
-    const response = await fetch(url, options);
+    // const response = await fetch(url, options);
 
-    if (!response.ok) {
-      const error = await response.json();
-      const errorMessage = error[0].message;
+    // if (!response.ok) {
+    //   const error = await response.json();
+    //   const errorMessage = error[0].message;
 
-      throw new Error(errorMessage);
-    }
+    //   throw new Error(errorMessage);
+    // }
 
-    const { phone } = await response.json();
+    // const { phone } = await response.json();
+    const phone = localStorage.load(localStorageKeys.phone);
+    //
     toggleSmsCodeInputsDisabled();
     setResendPhoneNumberInterval();
     localStorage.save({ key: localStorageKeys.phone, value: phone });

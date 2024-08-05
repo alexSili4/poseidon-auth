@@ -11,6 +11,8 @@ const refs = {
   phoneFormNextBtn: document.querySelector('.js-sign-up-form-phone-next'),
   resendPhoneTimeout: document.querySelector('.js-sign-up-form-resend-phone-timeout'),
   resendPhoneTimeoutTime: document.querySelector('.js-sign-up-form-resend-phone-timeout-time'),
+  signUpPhoneStep: document.querySelector('.js-sign-up-phone-step'),
+  signUpEmailStep: document.querySelector('.js-sign-up-email-step'),
 };
 
 export default refs;
