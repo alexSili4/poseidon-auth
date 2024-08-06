@@ -1,5 +1,7 @@
+import constants from './constants';
+
 const checkInput = (input) => {
-  input.classList.add('check');
+  input.classList.add(constants.checkClassName);
 };
 
 export default checkInput;

@@ -12,11 +12,19 @@ const refs = {
   resendPhoneTimeout: document.querySelector('.js-sign-up-form-resend-phone-timeout'),
   resendPhoneTimeoutTime: document.querySelector('.js-sign-up-form-resend-phone-timeout-time'),
   signUpPhoneStep: document.querySelector('.js-sign-up-phone-step'),
+  // email
   signUpEmailStep: document.querySelector('.js-sign-up-email-step'),
-  signUpFormToggleShowPassBtn: document.querySelector('.js-sign-up-form-toggle-show-password-btn'),
-  signUpFormInputPass: document.querySelector('.js-sign-up-form-input-password'),
   signUpFormEmail: document.querySelector('.js-sign-up-form-email'),
   signUpFormEmailSubmitBtn: document.querySelector('.js-sign-up-form-email-submit'),
+  signUpFormEmailInputWrap: document.querySelector('.js-sign-up-form-input-email-wrap'),
+  signUpFormEmailInputError: document.querySelector('.js-sign-up-form-input-email-error'),
+  signUpFormInputPassWrap: document.querySelector('.js-sign-up-form-input-password-wrap'),
+  signUpFormInputPass: document.querySelector('.js-sign-up-form-input-password'),
+  signUpFormInputPassError: document.querySelector('.js-sign-up-form-input-password-error'),
+  signUpFormToggleShowPassBtn: document.querySelector('.js-sign-up-form-toggle-show-password-btn'),
+  //profile
+  signUpStepProfile: document.querySelector('.js-sign-up-step-profile'),
+  signUpFormProfile: document.querySelector('.js-sign-up-form-profile'),
 };
 
 export default refs;

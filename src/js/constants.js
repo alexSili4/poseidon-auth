@@ -2,8 +2,12 @@ const constants = {
   // attributes
   disabledAttributeName: 'disabled',
   // classNames
+  checkClassName: 'check',
   invalidClassName: 'invalid',
   timeoutClassName: 'js-timeout',
+  displayNoneClassName: 'display-none',
+  successClassName: 'success',
+  currentClassName: 'current',
   // input types
   inputTextType: 'text',
   inputPassType: 'password',
