@@ -27,6 +27,7 @@
 }
 
 .auth-form-account-link {
+  align-self: center;
   margin-top: 24px;
   color: #4289fe;
   font-family: Geologica;

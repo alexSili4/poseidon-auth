@@ -16,6 +16,7 @@ const refs = {
   signUpFormToggleShowPassBtn: document.querySelector('.js-sign-up-form-toggle-show-password-btn'),
   signUpFormInputPass: document.querySelector('.js-sign-up-form-input-password'),
   signUpFormEmail: document.querySelector('.js-sign-up-form-email'),
+  signUpFormEmailSubmitBtn: document.querySelector('.js-sign-up-form-email-submit'),
 };
 
 export default refs;

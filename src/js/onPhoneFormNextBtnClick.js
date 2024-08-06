@@ -1,11 +1,9 @@
-import gideSignUpFormPhone from './hideSignUpFormPhone';
+import showSignUpFormEmail from './showSignUpFormEmail';
 import localStorage from './localStorage';
 import localStorageKeys from './localStorageKeys';
 import refs from './refs';
 
-const onPhoneFormNextBtnClick = (e) => {
-  e.currentTarget.blur();
-
+const onPhoneFormNextBtnClick = () => {
   const phone = localStorage.load(localStorageKeys.phone);
   let smsCode = '';
 
@@ -16,7 +14,7 @@ const onPhoneFormNextBtnClick = (e) => {
 
   const data = { phone, smsCode };
   localStorage.save({ key: localStorageKeys.signUpFormPhone, value: data });
-  gideSignUpFormPhone();
+  showSignUpFormEmail();
 };
 
 export default onPhoneFormNextBtnClick;
