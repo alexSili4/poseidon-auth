@@ -17,6 +17,7 @@ const constants = {
   passMinLength: 8,
   // other
   phoneExample: '99 999 9999',
+  birthdayExample: '99/99/9999',
 };
 
 export default constants;

@@ -25,6 +25,7 @@ const refs = {
   //profile
   signUpStepProfile: document.querySelector('.js-sign-up-step-profile'),
   signUpFormProfile: document.querySelector('.js-sign-up-form-profile'),
+  birthdayInput: document.querySelector('.js-auth-form-input-birthday'),
 };
 
 export default refs;
