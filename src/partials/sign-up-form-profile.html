@@ -1,15 +1,36 @@
+<!-- /customer/sign-up/set-username -->
+<!-- 
+subscription 0 1
+phone -->
 <form class="auth-form js-sign-up-form-profile display-none">
   <div class="auth-form-labels-wrap">
     <label class="auth-form-input-label">
-      <span class="auth-form-input-title">Email</span>
-      <span class="auth-form-input-wrap js-sign-up-form-input-email-wrap">
-        <input type="email" name="email" class="auth-form-input email js-auth-form-input-email" placeholder="Додайте Email" required />
-        <span class="auth-form-input-info error js-sign-up-form-input-email-error">Помилка</span>
-        <svg class="auth-form-input-check-icon email">
-          <use href="/icons/icons.svg#input-check"></use>
-        </svg>
+      <span class="auth-form-input-title">Ім&#8217;я</span>
+      <span class="auth-form-input-wrap js-sign-up-form-input-name-wrap">
+        <input type="text" name="username" class="auth-form-input" placeholder="Додайте Ім&#8217;я" required />
+        <span class="auth-form-input-info error js-sign-up-form-input-name-error">Помилка</span>
       </span>
     </label>
+    <label class="auth-form-input-label">
+      <span class="auth-form-input-title">Дата народження</span>
+      <span class="auth-form-input-wrap js-sign-up-form-input-birthday-wrap">
+        <input type="text" name="birthday" class="auth-form-input" placeholder="ДД/ММ/РРРР" required />
+        <span class="auth-form-input-info error js-sign-up-form-input-birthday-error">Помилка</span>
+      </span>
+    </label>
+    <div class="auth-form-input-label">
+      <p class="auth-form-input-title">Стать</p>
+      <div class="sign-up-form-profile-sex-custom-radiobtns-wrap">
+        <label class="sign-up-form-profile-sex-custom-radiobtn">
+          <input class="hidden-element" type="radio" name="sex" value="woman" required />
+          <span class="sign-up-form-profile-sex-custom-radiobtn-title">Жіноча</span>
+        </label>
+        <label class="sign-up-form-profile-sex-custom-radiobtn">
+          <input class="hidden-element" type="radio" name="sex" value="man" required />
+          <span class="sign-up-form-profile-sex-custom-radiobtn-title">Чоловіча</span>
+        </label>
+      </div>
+    </div>
   </div>
   <button type="submit" class="auth-form-btn js-sign-up-form-email-submit" disabled>Далі</button>
 </form>

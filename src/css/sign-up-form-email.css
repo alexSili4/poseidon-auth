@@ -18,7 +18,7 @@
   height: 24px;
   opacity: 0;
   transform: translateX(-50%) translateY(-50%);
-  fill: greenyellow;
+  fill: #bcc3d3;
   transition: fill var(--transition-duration-and-func);
 }
 
