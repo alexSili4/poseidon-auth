@@ -27,6 +27,10 @@ const refs = {
   signUpFormProfile: document.querySelector('.js-sign-up-form-profile'),
   birthdayInput: document.querySelector('.js-auth-form-input-birthday'),
   signUpFormProfileSubmitBtn: document.querySelector('.js-sign-up-form-profile-submit'),
+  signUpFormInputNameError: document.querySelector('.js-sign-up-form-input-name-error'),
+  signUpFormInputBirthdayError: document.querySelector('.js-sign-up-form-input-birthday-error'),
+  signUpFormInputNameWrap: document.querySelector('.js-sign-up-form-input-name-wrap'),
+  signUpFormInputBirthdayWrap: document.querySelector('.js-sign-up-form-input-birthday-wrap'),
 };
 
 export default refs;
