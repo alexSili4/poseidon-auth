@@ -8,6 +8,7 @@ import onDomContentLoaded from './onDomContentLoaded';
 import onSignUpFormToggleShowPassBtnClick from './onSignUpFormToggleShowPassBtnClick';
 import onSignUpFormEmailInput from './onSignUpFormEmailInput';
 import onSignUpFormEmailSubmit from './onSignUpFormEmailSubmit';
+import onSignUpFormProfileInput from './onSignUpFormProfileInput';
 
 document.addEventListener('DOMContentLoaded', onDomContentLoaded);
 
@@ -27,3 +28,5 @@ refs.signUpFormToggleShowPassBtn.addEventListener('click', onSignUpFormToggleSho
 refs.signUpFormEmail.addEventListener('input', onSignUpFormEmailInput);
 
 refs.signUpFormEmail.addEventListener('submit', onSignUpFormEmailSubmit);
+
+refs.signUpFormProfile.addEventListener('input', onSignUpFormProfileInput);

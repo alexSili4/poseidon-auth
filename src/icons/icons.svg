@@ -32,5 +32,8 @@
 <symbol id="input-check" viewBox="0 0 31 32">
 <path fill="none" stroke="#4289fe" style="stroke: var(--color1, #4289fe)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.56" d="M19.2 14.001l-5.12 5.12-2.56-2.56M15.36 28.081c-6.362 0-11.52-5.158-11.52-11.52s5.158-11.52 11.52-11.52c6.362 0 11.52 5.158 11.52 11.52s-5.158 11.52-11.52 11.52z"></path>
 </symbol>
+<symbol id="checkbox" viewBox="0 0 36 32">
+<path d="M11.852 29.040l-11.852-11.852 3.778-3.778 8.074 8.074 19.926-19.926 3.778 3.778-23.704 23.704z"></path>
+</symbol>
 </defs>
 </svg>

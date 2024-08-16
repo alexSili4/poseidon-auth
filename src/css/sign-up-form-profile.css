@@ -33,3 +33,48 @@
 .sign-up-form-profile-sex-custom-radiobtn:is(:hover, :focus, :has(input:checked)) .sign-up-form-profile-sex-custom-radiobtn-title {
   color: #4289fe;
 }
+
+.sign-up-form-profile-subscription-custom-checkbox-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.sign-up-form-profile-subscription-custom-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid;
+  border-color: #e6e9eb;
+  background-color: transparent;
+  transition: background-color var(--transition-duration-and-func), border-color var(--transition-duration-and-func);
+}
+
+.auth-form-input-label:has(input:checked) .sign-up-form-profile-subscription-custom-checkbox {
+  border-color: transparent;
+  background-color: #4289fe;
+}
+
+.sign-up-form-profile-subscription-custom-checkbox-icon {
+  width: 10px;
+  height: 8px;
+  fill: transparent;
+  transition: fill var(--transition-duration-and-func);
+}
+
+.auth-form-input-label:has(input:checked) .sign-up-form-profile-subscription-custom-checkbox-icon {
+  fill: var(--white-color);
+}
+
+.sign-up-form-profile-subscription-custom-checkbox-title {
+  color: #2f3037;
+  font-family: Geologica;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+}
