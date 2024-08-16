@@ -2,14 +2,12 @@ import setFormData from './setFormData';
 import toggleSignUpFormProfileSubmitBtnDisabled from './toggleSignUpFormProfileSubmitBtnDisabled';
 
 const onSignUpFormProfileInput = (e) => {
-  const data = { sex: '' };
+  const data = { sex: '', subscription: 'off' };
 
   setFormData({ data, form: e.currentTarget });
 
-  data.subscription = data.subscription ? 1 : 0;
-
   const keys = Object.keys(data);
-  const isValidFormData = keys.every((key) => data[key] || typeof data[key] === 'number');
+  const isValidFormData = keys.every((key) => data[key]);
   console.log(data);
   toggleSignUpFormProfileSubmitBtnDisabled(isValidFormData);
 };
