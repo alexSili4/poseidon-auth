@@ -8,7 +8,7 @@ const onSignUpFormProfileInput = (e) => {
 
   const keys = Object.keys(data);
   const isValidFormData = keys.every((key) => data[key]);
-  console.log(data);
+
   toggleSignUpFormProfileSubmitBtnDisabled(isValidFormData);
 };
 
