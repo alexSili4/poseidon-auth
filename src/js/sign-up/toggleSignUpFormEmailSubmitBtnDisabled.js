@@ -1,4 +1,4 @@
-import constants from './constants';
+import constants from '/js/constants';
 import refs from './refs';
 
 const toggleSignUpFormEmailSubmitBtnDisabled = (condition) => {

@@ -1,4 +1,4 @@
-import setFormData from './setFormData';
+import setFormData from '/js/setFormData';
 import toggleSignUpFormProfileSubmitBtnDisabled from './toggleSignUpFormProfileSubmitBtnDisabled';
 
 const onSignUpFormProfileInput = (e) => {

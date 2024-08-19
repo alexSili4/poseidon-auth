@@ -1,4 +1,4 @@
-import constants from './constants';
+import constants from '/js/constants';
 import localStorage from './localStorage';
 import localStorageKeys from './localStorageKeys';
 import refs from './refs';

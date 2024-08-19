@@ -1,5 +1,5 @@
+import constants from '/js/constants';
 import checkInput from './checkInput';
-import constants from './constants';
 import refs from './refs';
 import toggleDisabledBtn from './toggleDisabledBtn';
 

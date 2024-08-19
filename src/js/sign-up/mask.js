@@ -1,6 +1,6 @@
 import Inputmask from 'inputmask';
-import refs from '/js/refs';
 import constants from '/js/constants';
+import refs from './refs';
 
 Inputmask({ mask: constants.phoneExample, clearMaskOnLostFocus: false, placeholder: '', jitMasking: true }).mask(refs.phoneInput);
 

@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import glob from 'glob';
+import { resolve } from 'path';
 import injectHTML from 'vite-plugin-html-inject';
 import FullReload from 'vite-plugin-full-reload';
 
@@ -8,7 +8,11 @@ export default defineConfig({
   build: {
     minify: false,
     rollupOptions: {
-      input: glob.sync('./src/*.html'),
+      input: {
+        main: resolve(__dirname, './src/index.html'),
+        'sign-in': resolve(__dirname, './src/sign-in/index.html'),
+        'sign-up': resolve(__dirname, './src/sign-up/index.html'),
+      },
       output: {
         assetFileNames: (assetInfo) => {
           if (assetInfo.name.endsWith('.css')) {

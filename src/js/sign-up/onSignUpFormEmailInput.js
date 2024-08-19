@@ -1,7 +1,7 @@
-import setFormData from './setFormData';
-import constants from './constants';
+import constants from '/js/constants';
+import setFormData from '/js/setFormData';
 import toggleSignUpFormEmailSubmitBtnDisabled from './toggleSignUpFormEmailSubmitBtnDisabled';
-import validateValue from './validateValue';
+import validateValue from '/js/validateValue';
 
 const onSignUpFormEmailInput = (e) => {
   const data = {};

@@ -1,4 +1,4 @@
-import setFormData from './setFormData';
+import setFormData from '/js/setFormData';
 import localStorage from './localStorage';
 import localStorageKeys from './localStorageKeys';
 import fetchEmailConfirm from './fetchEmailConfirm';

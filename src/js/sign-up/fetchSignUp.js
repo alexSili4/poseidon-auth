@@ -1,6 +1,4 @@
-import constants from './constants';
-import localStorage from './localStorage';
-import localStorageKeys from './localStorageKeys';
+import constants from '/js/constants';
 import refs from './refs';
 
 const fetchSignUp = async (data) => {

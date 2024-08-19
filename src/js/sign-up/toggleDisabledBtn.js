@@ -1,4 +1,4 @@
-import constants from './constants';
+import constants from '/js/constants';
 
 const toggleDisabledBtn = (button) => {
   button.toggleAttribute(constants.disabledAttributeName);

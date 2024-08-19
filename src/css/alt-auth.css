@@ -1,0 +1,68 @@
+.auth-form-alt-auth-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.auth-form-alt-auth-text {
+  color: #7e8494;
+  font-family: Geologica;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.auth-form-alt-auth-links-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.auth-form-alt-auth-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  height: 56px;
+  border-radius: 9px;
+  background-color: #f4f6f9;
+}
+
+.auth-form-alt-auth-link-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.auth-form-alt-auth-link-text {
+  color: #2f3037;
+  font-family: Geologica;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.29;
+}
+
+@media screen and (min-width: 1440px) {
+  .auth-form-alt-auth-wrap {
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  .auth-form-alt-auth-links-list {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0px;
+  }
+
+  .auth-form-alt-auth-links-list-item {
+    width: calc(50% - 4px);
+  }
+
+  .auth-form-alt-auth-link {
+    width: 100%;
+    height: 54px;
+  }
+}

@@ -1,0 +1,13 @@
+.auth-form-input-info.forgot-password {
+  color: #4289fe;
+}
+
+.auth-form-input-wrap.invalid > .auth-form-input-info.forgot-password {
+  transform: translateY(12px);
+}
+
+@media screen and (min-width: 1440px) {
+  .auth-form-input-wrap.invalid > .auth-form-input-info.forgot-password {
+    transform: translateY(16px);
+  }
+}
