@@ -7,11 +7,16 @@ const onSignInFormSubmit = (e) => {
 
   const { name: tokenName, value: tokenValue } = refs.csrfTokenInput;
 
-  const data = { [tokenName]: tokenValue };
+  const data = {};
 
   setFormData({ data, form: e.currentTarget });
 
-  fetchSignIn({ CustomerLoginForm: data });
+  const signInData = {
+    CustomerLoginForm: data,
+    [tokenName]: tokenValue,
+  };
+
+  fetchSignIn(signInData);
 };
 
 export default onSignInFormSubmit;
