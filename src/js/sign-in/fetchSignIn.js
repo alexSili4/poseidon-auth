@@ -21,7 +21,7 @@ const fetchSignIn = async (data) => {
       throw new Error(JSON.stringify({ errors }));
     }
 
-    const data = await response.json();
+    window.location.href = '/customer';
   } catch (error) {
     const { errors } = JSON.parse(error.message);
 

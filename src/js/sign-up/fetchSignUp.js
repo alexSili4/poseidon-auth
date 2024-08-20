@@ -28,7 +28,7 @@ const fetchSignUp = async (data) => {
       throw new Error(errorMessage);
     }
 
-    const data = await response.json();
+    window.location.href = '/customer';
   } catch (error) {
     const isDoubleError = error.message.includes('\n');
     const isUsernameError = error.message.toLowerCase().includes("ім'я");

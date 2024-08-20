@@ -12,6 +12,7 @@ export default defineConfig({
         main: resolve(__dirname, './src/index.html'),
         'sign-in': resolve(__dirname, './src/sign-in/index.html'),
         'sign-up': resolve(__dirname, './src/sign-up/index.html'),
+        'forgot-password': resolve(__dirname, './src/forgot-password/index.html'),
       },
       output: {
         assetFileNames: (assetInfo) => {
