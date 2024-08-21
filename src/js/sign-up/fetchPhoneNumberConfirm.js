@@ -19,10 +19,9 @@ const fetchPhoneNumberConfirm = async (data) => {
     const response = await fetch(url, options);
 
     if (!response.ok) {
-      const error = await response.json();
-      const errorMessage = error[0].message;
+      const errors = await response.json();
 
-      throw new Error(errorMessage);
+      throw new Error(JSON.stringify({ errors }));
     }
 
     const { phone } = await response.json();
@@ -32,8 +31,14 @@ const fetchPhoneNumberConfirm = async (data) => {
     localStorage.save({ key: localStorageKeys.phone, value: phone });
     refs.phoneInputWrap.classList.remove(constants.invalidClassName);
   } catch (error) {
-    refs.phoneError.textContent = error.message;
-    refs.phoneInputWrap.classList.add(constants.invalidClassName);
+    const { errors } = JSON.parse(error.message);
+
+    const phoneErrorMessage = errors.find(({ field }) => field === 'phone')?.message;
+
+    if (phoneErrorMessage) {
+      refs.phoneError.textContent = phoneErrorMessage;
+      refs.phoneInputWrap.classList.add(constants.invalidClassName);
+    }
   }
 };
 

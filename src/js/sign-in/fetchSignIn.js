@@ -15,7 +15,7 @@ const fetchSignIn = async (data) => {
   try {
     const response = await fetch(url, options);
 
-    if (!response.ok) {
+    if (!response.ok && response.status !== 302) {
       const errors = await response.json();
 
       throw new Error(JSON.stringify({ errors }));
@@ -35,7 +35,7 @@ const fetchSignIn = async (data) => {
     }
 
     if (passwordErrorMessage) {
-      refs.signInFormInputPassError.textContent = loginErrorMessage;
+      refs.signInFormInputPassError.textContent = passwordErrorMessage;
       refs.signInFormInputPassWrap.classList.add(constants.invalidClassName);
     }
   }

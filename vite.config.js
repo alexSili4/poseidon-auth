@@ -6,13 +6,14 @@ import FullReload from 'vite-plugin-full-reload';
 export default defineConfig({
   root: 'src',
   build: {
-    minify: false,
+    // minify: false,
     rollupOptions: {
       input: {
         main: resolve(__dirname, './src/index.html'),
         'sign-in': resolve(__dirname, './src/sign-in/index.html'),
         'sign-up': resolve(__dirname, './src/sign-up/index.html'),
         'forgot-password': resolve(__dirname, './src/forgot-password/index.html'),
+        'reset-password': resolve(__dirname, './src/reset-password/index.html'),
       },
       output: {
         assetFileNames: (assetInfo) => {

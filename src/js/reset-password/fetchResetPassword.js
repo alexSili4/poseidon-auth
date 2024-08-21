@@ -1,7 +1,5 @@
-import refs from './refs';
-
-const fetchForgotPassword = async (data) => {
-  const url = '/customer/auth/forgot-password';
+const fetchResetPassword = async (data) => {
+  const url = '/customer/auth/reset-password';
   const options = {
     method: 'POST',
     body: JSON.stringify(data),
@@ -24,13 +22,13 @@ const fetchForgotPassword = async (data) => {
   } catch (error) {
     const { errors } = JSON.parse(error.message);
 
-    const emailErrorMessage = errors.find(({ field }) => field === 'email')?.message;
+    const passwordErrorMessage = errors.find(({ field }) => field === 'password')?.message;
 
-    if (emailErrorMessage) {
-      refs.forgotPassFormInputEmailError.textContent = emailErrorMessage;
-      refs.forgotPassFormInputEmailWrap.classList.add(constants.invalidClassName);
+    if (passwordErrorMessage) {
+      refs.resetPassFormInputPassError.textContent = passwordErrorMessage;
+      refs.resetPassFormInputPassWrap.classList.add(constants.invalidClassName);
     }
   }
 };
 
-export default fetchForgotPassword;
+export default fetchResetPassword;

@@ -15,38 +15,42 @@ const fetchSignUp = async (data) => {
     const response = await fetch(url, options);
 
     if (!response.ok) {
-      let errorMessage = '';
       const errors = await response.json();
-      const usernameErrorMessage = errors.find(({ field }) => field === 'username')?.message;
-      const birthdayErrorMessage = errors.find(({ field }) => field === 'birthday')?.message;
-      if (usernameErrorMessage && birthdayErrorMessage) {
-        errorMessage = `${usernameErrorMessage}\n${birthdayErrorMessage}`;
-      } else {
-        errorMessage = usernameErrorMessage || birthdayErrorMessage;
-      }
 
-      throw new Error(errorMessage);
+      throw new Error(JSON.stringify({ errors }));
     }
 
     window.location.href = '/customer';
   } catch (error) {
-    const isDoubleError = error.message.includes('\n');
-    const isUsernameError = error.message.toLowerCase().includes("ім'я");
-    const isBirthdayError = error.message.toLowerCase().includes('дата народження');
+    const { errors } = JSON.parse(error.message);
 
-    if (isDoubleError) {
-      const errors = error.message.split('\n');
-      refs.signUpFormInputNameError.textContent = errors[0];
-      refs.signUpFormInputBirthdayError.textContent = errors[1];
+    const usernameErrorMessage = errors.find(({ field }) => field === 'username')?.message;
+    const birthdayErrorMessage = errors.find(({ field }) => field === 'birthday')?.message;
+
+    if (usernameErrorMessage) {
+      refs.signUpFormInputNameError.textContent = usernameErrorMessage;
       refs.signUpFormInputNameWrap.classList.add(constants.invalidClassName);
-      refs.signUpFormInputBirthdayWrap.classList.add(constants.invalidClassName);
-    } else if (isUsernameError) {
-      refs.signUpFormInputNameError.textContent = error.message;
-      refs.signUpFormInputNameWrap.classList.add(constants.invalidClassName);
-    } else if (isBirthdayError) {
-      refs.signUpFormInputBirthdayError.textContent = error.message;
+    }
+
+    if (birthdayErrorMessage) {
+      refs.signUpFormInputBirthdayError.textContent = birthdayErrorMessage;
       refs.signUpFormInputBirthdayWrap.classList.add(constants.invalidClassName);
     }
+
+    // const isDoubleError = error.message.includes('\n');
+    // const isUsernameError = error.message.toLowerCase().includes("ім'я");
+    // const isBirthdayError = error.message.toLowerCase().includes('дата народження');
+    // if (isDoubleError) {
+    //   const errors = error.message.split('\n');
+    //   refs.signUpFormInputNameError.textContent = errors[0];
+    //   refs.signUpFormInputBirthdayError.textContent = errors[1];
+    //   refs.signUpFormInputNameWrap.classList.add(constants.invalidClassName);
+    //   refs.signUpFormInputBirthdayWrap.classList.add(constants.invalidClassName);
+    // } else if (isUsernameError) {
+
+    // } else if (isBirthdayError) {
+
+    // }
   }
 };
 

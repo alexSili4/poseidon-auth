@@ -2,7 +2,6 @@
   display: block;
   width: 24px;
   height: 24px;
-  transition: opacity var(--transition-duration-and-func);
 }
 
 .auth-form-input-btn.toggle-show-password:is(:hover, :focus) > .auth-form-input-btn-icon.password {
@@ -19,7 +18,7 @@
   opacity: 0;
   transform: translateX(-50%) translateY(-50%);
   fill: #bcc3d3;
-  transition: fill var(--transition-duration-and-func);
+  transition: fill var(--transition-duration-and-func), opacity var(--transition-duration-and-func);
 }
 
 .auth-form-input-btn.toggle-show-password.show > .auth-form-input-btn-icon.password.hide {

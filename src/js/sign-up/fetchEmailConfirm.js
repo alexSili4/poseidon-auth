@@ -18,16 +18,9 @@ const fetchEmailConfirm = async (data) => {
     const response = await fetch(url, options);
 
     if (!response.ok) {
-      let errorMessage = '';
       const errors = await response.json();
-      const emailErrorMessage = errors.find(({ field }) => field === 'email')?.message;
-      const passwordErrorMessage = errors.find(({ field }) => field === 'password')?.message;
-      if (emailErrorMessage && passwordErrorMessage) {
-        errorMessage = `${emailErrorMessage}\n${passwordErrorMessage}`;
-      } else {
-        errorMessage = emailErrorMessage || passwordErrorMessage;
-      }
-      throw new Error(errorMessage);
+
+      throw new Error(JSON.stringify({ errors }));
     }
 
     const data = await response.json();
@@ -39,21 +32,18 @@ const fetchEmailConfirm = async (data) => {
       showSignUpFormProfile();
     }, 1000);
   } catch (error) {
-    const isDoubleError = error.message.includes('\n');
-    const isEmailError = error.message.toLowerCase().includes('email');
-    const isPasswordError = error.message.toLowerCase().includes('пароль');
+    const { errors } = JSON.parse(error.message);
 
-    if (isDoubleError) {
-      const errors = error.message.split('\n');
-      refs.signUpFormEmailInputError.textContent = errors[0];
-      refs.signUpFormInputPassError.textContent = errors[1];
+    const emailErrorMessage = errors.find(({ field }) => field === 'email')?.message;
+    const passwordErrorMessage = errors.find(({ field }) => field === 'password')?.message;
+
+    if (emailErrorMessage) {
+      refs.signUpFormEmailInputError.textContent = emailErrorMessage;
       refs.signUpFormEmailInputWrap.classList.add(constants.invalidClassName);
-      refs.signUpFormInputPassWrap.classList.add(constants.invalidClassName);
-    } else if (isEmailError) {
-      refs.signUpFormEmailInputError.textContent = error.message;
-      refs.signUpFormEmailInputWrap.classList.add(constants.invalidClassName);
-    } else if (isPasswordError) {
-      refs.signUpFormInputPassError.textContent = error.message;
+    }
+
+    if (passwordErrorMessage) {
+      refs.signUpFormInputPassError.textContent = passwordErrorMessage;
       refs.signUpFormInputPassWrap.classList.add(constants.invalidClassName);
     }
   }

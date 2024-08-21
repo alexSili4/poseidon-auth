@@ -17,18 +17,23 @@ const fetchSmsCodeConfirm = async (data) => {
     const response = await fetch(url, options);
 
     if (!response.ok) {
-      const error = await response.json();
-      const errorMessage = error[0].message;
+      const errors = await response.json();
 
-      throw new Error(errorMessage);
+      throw new Error(JSON.stringify({ errors }));
     }
 
     checkInput(refs.phoneInputWrap);
     checkInput(refs.smsCodeInputWrap);
     toggleDisabledBtn(refs.phoneFormNextBtn);
   } catch (error) {
-    refs.smsCodeError.textContent = error.message;
-    refs.smsCodeInputWrap.classList.add(constants.invalidClassName);
+    const { errors } = JSON.parse(error.message);
+
+    const smsCodeErrorMessage = errors.find(({ field }) => field === 'sms_code')?.message;
+
+    if (smsCodeErrorMessage) {
+      refs.smsCodeError.textContent = smsCodeErrorMessage;
+      refs.smsCodeInputWrap.classList.add(constants.invalidClassName);
+    }
   }
 };
 
