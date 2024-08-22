@@ -1,5 +1,5 @@
-const fetchResetPassword = async (data) => {
-  const url = '/customer/auth/reset-password';
+const fetchResetPassword = async ({ data, token }) => {
+  const url = `/customer/auth/reset-password?token=${token}`;
   const options = {
     method: 'POST',
     body: JSON.stringify(data),
