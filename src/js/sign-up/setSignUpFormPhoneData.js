@@ -1,3 +1,4 @@
+import checkInput from './checkInput';
 import refs from './refs';
 
 const setSignUpFormPhoneData = (data) => {
@@ -7,6 +8,8 @@ const setSignUpFormPhoneData = (data) => {
   refs.smsCodeInputs.forEach((input, index) => {
     input.value = smsCode[index];
   });
+
+  checkInput(refs.phoneInputWrap);
 };
 
 export default setSignUpFormPhoneData;
