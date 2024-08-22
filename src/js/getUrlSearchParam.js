@@ -3,7 +3,7 @@ const getUrlSearchParam = (searchParam) => {
 
   const params = new URLSearchParams(url.search);
 
-  return params.get(searchParam);
+  return params.get(searchParam) ?? '';
 };
 
 export default getUrlSearchParam;

@@ -48,7 +48,9 @@
   justify-content: center;
   width: 20px;
   height: 20px;
+  border: none;
   border-radius: 50%;
+  padding: 0;
   background-color: #bcc3d3;
 }
 
