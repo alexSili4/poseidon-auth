@@ -16,7 +16,7 @@ const fetchForgotPassword = async (data) => {
   try {
     const response = await fetch(url, options);
 
-    if (!response.ok) {
+    if (!response.ok && response.status !== 302) {
       const errors = await response.json();
 
       throw new Error(JSON.stringify({ errors }));
