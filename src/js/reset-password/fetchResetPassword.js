@@ -1,3 +1,5 @@
+import redirectTo from '/js/redirectTo';
+
 const fetchResetPassword = async ({ data, token }) => {
   const url = `/customer/auth/reset-password?token=${token}`;
   const options = {
@@ -18,7 +20,7 @@ const fetchResetPassword = async ({ data, token }) => {
       throw new Error(JSON.stringify({ errors }));
     }
 
-    window.location.href = '/customer';
+    redirectTo(response);
   } catch (error) {
     const { errors } = JSON.parse(error.message);
 

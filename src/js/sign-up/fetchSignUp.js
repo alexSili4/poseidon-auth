@@ -1,5 +1,6 @@
 import constants from '/js/constants';
 import refs from './refs';
+import redirectTo from '/js/redirectTo';
 
 const fetchSignUp = async (data) => {
   const url = '/customer/sign-up/set-username';
@@ -20,7 +21,7 @@ const fetchSignUp = async (data) => {
       throw new Error(JSON.stringify({ errors }));
     }
 
-    window.location.href = '/customer';
+    redirectTo(response);
   } catch (error) {
     const { errors } = JSON.parse(error.message);
 

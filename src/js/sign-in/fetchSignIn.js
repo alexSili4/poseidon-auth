@@ -1,5 +1,6 @@
 import constants from '/js/constants';
 import refs from './refs';
+import redirectTo from '/js/redirectTo';
 
 const fetchSignIn = async (data) => {
   const url = '/customer/auth/login';
@@ -21,7 +22,7 @@ const fetchSignIn = async (data) => {
       throw new Error(JSON.stringify({ errors }));
     }
 
-    window.location.href = '/customer';
+    redirectTo(response);
   } catch (error) {
     const { errors } = JSON.parse(error.message);
 
