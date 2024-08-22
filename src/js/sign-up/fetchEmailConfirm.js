@@ -24,9 +24,10 @@ const fetchEmailConfirm = async (data) => {
     }
 
     const data = await response.json();
-    refs.signUpFormEmailInputWrap.classList.add(constants.checkClassName);
     const { password, ...signUpFormEmailData } = data;
     localStorage.save({ key: localStorageKeys.signUpFormEmail, value: signUpFormEmailData });
+
+    refs.signUpFormEmailInputWrap.classList.add(constants.checkClassName);
 
     setTimeout(() => {
       showSignUpFormProfile();

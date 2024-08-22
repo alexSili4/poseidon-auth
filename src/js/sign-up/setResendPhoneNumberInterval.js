@@ -1,6 +1,6 @@
 import refs from './refs';
 import setTime from './setTime';
-import toggleDisabledBtn from './toggleDisabledBtn';
+import enableBtn from '/js/enableBtn';
 import toggleShowResendPhoneNumberTimeout from './toggleShowResendPhoneNumberTimeout';
 
 const setResendPhoneNumberInterval = () => {
@@ -16,7 +16,7 @@ const setResendPhoneNumberInterval = () => {
     if (!secondsNumber) {
       clearInterval(intervalId);
       toggleShowResendPhoneNumberTimeout();
-      toggleDisabledBtn(refs.confirmPhoneNumberBtn);
+      enableBtn(refs.confirmPhoneNumberBtn);
     }
   }, stepTime);
 };

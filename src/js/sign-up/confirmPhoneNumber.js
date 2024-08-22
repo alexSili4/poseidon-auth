@@ -1,9 +1,9 @@
 import fetchPhoneNumberConfirm from './fetchPhoneNumberConfirm';
 import refs from './refs';
-import toggleDisabledBtn from './toggleDisabledBtn';
+import disabledBtn from '/js/disabledBtn';
 
 const confirmPhoneNumber = async (phoneNumber) => {
-  toggleDisabledBtn(refs.confirmPhoneNumberBtn);
+  disabledBtn(refs.confirmPhoneNumberBtn);
   const data = { SUP1: { phone: phoneNumber } };
 
   fetchPhoneNumberConfirm(data);

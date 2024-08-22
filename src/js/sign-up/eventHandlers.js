@@ -10,6 +10,7 @@ import onSignUpFormEmailInput from './onSignUpFormEmailInput';
 import onSignUpFormEmailSubmit from './onSignUpFormEmailSubmit';
 import onSignUpFormProfileInput from './onSignUpFormProfileInput';
 import onSignUpFormProfileSubmit from './onSignUpFormProfileSubmit';
+import onSignUpStepBtnClick from './onSignUpStepBtnClick';
 
 document.addEventListener('DOMContentLoaded', onDomContentLoaded);
 
@@ -33,3 +34,5 @@ refs.signUpFormEmail.addEventListener('submit', onSignUpFormEmailSubmit);
 refs.signUpFormProfile.addEventListener('input', onSignUpFormProfileInput);
 
 refs.signUpFormProfile.addEventListener('submit', onSignUpFormProfileSubmit);
+
+refs.signUpFormStepsList.addEventListener('click', onSignUpStepBtnClick);

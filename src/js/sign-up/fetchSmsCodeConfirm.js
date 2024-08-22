@@ -1,7 +1,7 @@
 import constants from '/js/constants';
 import checkInput from './checkInput';
 import refs from './refs';
-import toggleDisabledBtn from './toggleDisabledBtn';
+import enableBtn from '/js/enableBtn';
 
 const fetchSmsCodeConfirm = async (data) => {
   const url = '/customer/sign-up/check-sms-code';
@@ -24,7 +24,7 @@ const fetchSmsCodeConfirm = async (data) => {
 
     checkInput(refs.phoneInputWrap);
     checkInput(refs.smsCodeInputWrap);
-    toggleDisabledBtn(refs.phoneFormNextBtn);
+    enableBtn(refs.phoneFormNextBtn);
   } catch (error) {
     const { errors } = JSON.parse(error.message);
 

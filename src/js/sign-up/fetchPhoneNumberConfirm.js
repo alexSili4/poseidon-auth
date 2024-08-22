@@ -4,6 +4,7 @@ import localStorageKeys from './localStorageKeys';
 import refs from './refs';
 import setResendPhoneNumberInterval from './setResendPhoneNumberInterval';
 import toggleSmsCodeInputsDisabled from './toggleSmsCodeInputsDisabled';
+import clearSmsCodeInput from './clearSmsCodeInput';
 
 const fetchPhoneNumberConfirm = async (data) => {
   const url = '/customer/sign-up/send-sms';
@@ -28,6 +29,8 @@ const fetchPhoneNumberConfirm = async (data) => {
 
     toggleSmsCodeInputsDisabled();
     setResendPhoneNumberInterval();
+    clearSmsCodeInput();
+
     localStorage.save({ key: localStorageKeys.phone, value: phone });
     refs.phoneInputWrap.classList.remove(constants.invalidClassName);
   } catch (error) {
