@@ -1,6 +1,7 @@
 import constants from '/js/constants';
 import refs from './refs';
 import redirectTo from '/js/redirectTo';
+import clearSignUpFormLocalStorage from './clearSignUpFormLocalStorage';
 
 const fetchSignUp = async (data) => {
   const url = '/customer/sign-up/set-username';
@@ -21,6 +22,7 @@ const fetchSignUp = async (data) => {
       throw new Error(JSON.stringify({ errors }));
     }
 
+    clearSignUpFormLocalStorage();
     redirectTo(response);
   } catch (error) {
     const { errors } = JSON.parse(error.message);
@@ -37,21 +39,6 @@ const fetchSignUp = async (data) => {
       refs.signUpFormInputBirthdayError.textContent = birthdayErrorMessage;
       refs.signUpFormInputBirthdayWrap.classList.add(constants.invalidClassName);
     }
-
-    // const isDoubleError = error.message.includes('\n');
-    // const isUsernameError = error.message.toLowerCase().includes("ім'я");
-    // const isBirthdayError = error.message.toLowerCase().includes('дата народження');
-    // if (isDoubleError) {
-    //   const errors = error.message.split('\n');
-    //   refs.signUpFormInputNameError.textContent = errors[0];
-    //   refs.signUpFormInputBirthdayError.textContent = errors[1];
-    //   refs.signUpFormInputNameWrap.classList.add(constants.invalidClassName);
-    //   refs.signUpFormInputBirthdayWrap.classList.add(constants.invalidClassName);
-    // } else if (isUsernameError) {
-
-    // } else if (isBirthdayError) {
-
-    // }
   }
 };
 
