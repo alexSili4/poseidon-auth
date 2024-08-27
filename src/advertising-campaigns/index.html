@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main>
+      <div class="d-flex flex-column gap-16 js-accordion-wrapper pt-16">
+        <div class="form-group filter-item__search">
+          <input type="search" placeholder="Нужно допилить js..." class="form-control js-advertising-campaigns-search-input" />
+        </div>
+        <div class="d-flex gap-16 flex-column js-advertising-campaigns-search-list">
+          <div class="form-group filter-item__input d-flex gap-12 js-advertising-campaign">
+            <input type="checkbox" id="ac_id1" name="ac[]" value="1" class="form-control d-none" />
+            <label for="ac_id1" class="text-size-16 text-lighter js-advertising-campaign-name">Весенняя рекламная кампания</label>
+          </div>
+          <div class="form-group filter-item__input d-flex gap-12 js-advertising-campaign">
+            <input type="checkbox" id="ac_id2" name="ac[]" value="2" class="form-control d-none" />
+            <label for="ac_id2" class="text-size-16 text-lighter js-advertising-campaign-name">Еще одна РК</label>
+          </div>
+          <div class="form-group filter-item__input d-flex gap-12 js-advertising-campaign">
+            <input type="checkbox" id="ac_id3" name="ac[]" value="3" class="form-control d-none" />
+            <label for="ac_id3" class="text-size-16 text-lighter js-advertising-campaign-name">Банани від Волмарт</label>
+          </div>
+        </div>
+      </div>
+      <script type="module" src="/js/advertising-campaigns/main.js"></script>
+    </main>
+  </body>
+</html>

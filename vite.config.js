@@ -15,6 +15,7 @@ export default defineConfig({
         'forgot-password': resolve(__dirname, './src/forgot-password/index.html'),
         'reset-password': resolve(__dirname, './src/reset-password/index.html'),
         coupons: resolve(__dirname, './src/coupons/index.html'),
+        'advertising-campaigns': resolve(__dirname, './src/advertising-campaigns/index.html'),
       },
       output: {
         assetFileNames: (assetInfo) => {
