@@ -5,6 +5,7 @@ const constants = {
   checkClassName: 'check',
   invalidClassName: 'invalid',
   timeoutClassName: 'js-timeout',
+  isHiddenClassName: 'is-hidden',
   displayNoneClassName: 'display-none',
   successClassName: 'success',
   currentClassName: 'current',

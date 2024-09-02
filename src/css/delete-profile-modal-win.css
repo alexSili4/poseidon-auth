@@ -1,0 +1,159 @@
+body:has(.delete-profile-backdrop-wrap:not(.is-hidden)) {
+  overflow: hidden;
+}
+
+.delete-profile-backdrop-wrap {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  transition: opacity var(--transition-duration-and-func), visibility var(--transition-duration-and-func);
+}
+
+.landing-about-lesson-backdrop-wrap.is-hidden {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.delete-profile-backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 12px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(47, 48, 55, 0.25);
+}
+
+.delete-profile-modal-win {
+  position: relative;
+  border-radius: 8px;
+  background-color: #f4f6f9;
+  overflow: hidden;
+}
+
+.delete-profile-modal-win-close-btn {
+  position: absolute;
+  top: 32px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.delete-profile-modal-win-close-btn-icon {
+  width: 24px;
+  height: 24px;
+  fill: #bcc3d3;
+  transition: fill var(--transition-duration-and-func);
+}
+
+.delete-profile-modal-win-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 343px;
+  padding: 72px 20px 32px;
+}
+
+.delete-profile-modal-win-title {
+  color: #2f3037;
+  font-family: Geologica;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.delete-profile-modal-win-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.delete-profile-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  padding: 0;
+  border: 1px solid;
+  border-radius: 10px;
+  background-color: transparent;
+  font-family: Geologica;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.delete-profile-btn.cancel {
+  border-color: #7e8494;
+  color: #7e8494;
+}
+
+.delete-profile-btn.delete {
+  border-color: #ff613f;
+  color: #ff613f;
+}
+
+@media screen and (min-width: 1440px) {
+  .delete-profile-modal-win-close-btn {
+    top: 32px;
+    right: 32px;
+  }
+
+  .delete-profile-modal-win-close-btn:is(:hover, :focus) > .delete-profile-modal-win-close-btn-icon {
+    fill: #2f3037;
+  }
+
+  .delete-profile-modal-win-container {
+    gap: 48px;
+    width: 520px;
+    padding: 72px 32px 32px;
+  }
+
+  .delete-profile-modal-win-controls {
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 0px;
+    width: 100%;
+  }
+
+  .delete-profile-btn {
+    width: 200px;
+    transition: background-color var(--transition-duration-and-func), color var(--transition-duration-and-func);
+  }
+
+  .delete-profile-btn.cancel {
+    height: 48px;
+  }
+
+  .delete-profile-btn.cancel:is(:hover, :focus) {
+    background-color: #7e8494;
+    color: var(--white-color);
+  }
+
+  .delete-profile-btn.delete:is(:hover, :focus) {
+    background-color: #ff613f;
+    color: var(--white-color);
+  }
+}
+
+@media screen and (min-height: 300px) {
+  .delete-profile-backdrop-wrap {
+    overflow: hidden;
+  }
+}

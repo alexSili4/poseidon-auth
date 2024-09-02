@@ -1,16 +1,17 @@
-@import 'node_modules/modern-normalize/modern-normalize.css';
+/* @import 'node_modules/modern-normalize/modern-normalize.css'; */
 
-@import url('./fonts.css');
-@import url('./utilities.css');
-@import url('./variables.css');
-@import url('./sign-up.css');
-@import url('./decorative-auth-block.css');
-@import url('./auth-form-header.css');
-@import url('./auth-form-footer.css');
-@import url('./sign-up-form-steps-list.css');
-@import url('./sign-up-form.css');
-@import url('./sign-up-form-phone.css');
-@import url('./sign-up-form-email.css');
-@import url('./sign-up-form-profile.css');
-@import url('./alt-auth.css');
-@import url('./sign-in-form');
+/* @import url('./fonts.css'); */
+/* @import url('./utilities.css'); */
+/* @import url('./variables.css'); */
+/* @import url('./sign-up.css'); */
+/* @import url('./decorative-auth-block.css'); */
+/* @import url('./auth-form-header.css'); */
+/* @import url('./auth-form-footer.css'); */
+/* @import url('./sign-up-form-steps-list.css'); */
+/* @import url('./sign-up-form.css'); */
+/* @import url('./sign-up-form-phone.css'); */
+/* @import url('./sign-up-form-email.css'); */
+/* @import url('./sign-up-form-profile.css'); */
+/* @import url('./alt-auth.css'); */
+/* @import url('./sign-in-form'); */
+@import url('./delete-profile-modal-win');

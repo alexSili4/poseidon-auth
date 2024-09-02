@@ -6,7 +6,7 @@ import FullReload from 'vite-plugin-full-reload';
 export default defineConfig({
   root: 'src',
   build: {
-    minify: false,
+    // minify: false,
     rollupOptions: {
       input: {
         main: resolve(__dirname, './src/index.html'),
@@ -16,6 +16,7 @@ export default defineConfig({
         'reset-password': resolve(__dirname, './src/reset-password/index.html'),
         coupons: resolve(__dirname, './src/coupons/index.html'),
         'advertising-campaigns': resolve(__dirname, './src/advertising-campaigns/index.html'),
+        'delete-profile': resolve(__dirname, './src/delete-profile/index.html'),
       },
       output: {
         assetFileNames: (assetInfo) => {
