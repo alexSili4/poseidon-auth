@@ -1,8 +1,8 @@
-/* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+@import 'node_modules/modern-normalize/modern-normalize.css';
 
-/* @import url('./fonts.css'); */
-/* @import url('./utilities.css'); */
-/* @import url('./variables.css'); */
+@import url('./fonts.css');
+@import url('./utilities.css');
+@import url('./variables.css');
 /* @import url('./sign-up.css'); */
 /* @import url('./decorative-auth-block.css'); */
 /* @import url('./auth-form-header.css'); */
@@ -14,4 +14,5 @@
 /* @import url('./sign-up-form-profile.css'); */
 /* @import url('./alt-auth.css'); */
 /* @import url('./sign-in-form'); */
-@import url('./delete-profile-modal-win');
+/* @import url('./delete-profile-modal-win'); */
+@import url('./private-route-modal-win');

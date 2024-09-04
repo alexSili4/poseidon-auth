@@ -1,0 +1,94 @@
+body:has(.private-route-backdrop-wrap:not(.is-hidden)) {
+  overflow: hidden;
+}
+
+.private-route-backdrop-wrap {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  transition: opacity var(--transition-duration-and-func), visibility var(--transition-duration-and-func);
+}
+
+.private-route-backdrop-wrap.is-hidden {
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.private-route-backdrop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 12px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(47, 48, 55, 0.25);
+}
+
+.private-route-modal-win {
+  position: relative;
+  border-radius: 8px;
+  background-color: #f4f6f9;
+  background-image: url('/icons/private-route/email.svg');
+  background-position: top 40px left 50%;
+  background-size: 81px 79px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.private-route-modal-win-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 343px;
+  padding: 127px 20px 40px;
+}
+
+.private-route-modal-win-title {
+  color: #2f3037;
+  font-family: Geologica;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.private-route-modal-win-text {
+  color: #7e8494;
+  font-family: Geologica;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.private-route-modal-win-profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  border-radius: 10px;
+  background-image: linear-gradient(236.31deg, rgb(54, 111, 255) -35.791%, rgb(89, 188, 251) 185.295%);
+  color: var(--white-color);
+  font-family: Geologica;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+@media screen and (min-width: 1440px) {
+  .private-route-modal-win-container {
+    width: 480px;
+    padding: 127px 40px 40px;
+  }
+
+  .private-route-modal-win-profile-link {
+    width: 313px;
+  }
+}

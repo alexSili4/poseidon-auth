@@ -17,6 +17,7 @@ export default defineConfig({
         coupons: resolve(__dirname, './src/coupons/index.html'),
         'advertising-campaigns': resolve(__dirname, './src/advertising-campaigns/index.html'),
         'delete-profile': resolve(__dirname, './src/delete-profile/index.html'),
+        'private-route': resolve(__dirname, './src/private-route/index.html'),
       },
       output: {
         assetFileNames: (assetInfo) => {
