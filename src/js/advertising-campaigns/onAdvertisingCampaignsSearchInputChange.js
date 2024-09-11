@@ -8,8 +8,6 @@ const onAdvertisingCampaignsSearchInputChange = (e) => {
 
     const isTargetAdvertisingCampaign = advertisingCampaignName.toLowerCase().startsWith(searchQuery.toLowerCase());
 
-    console.log(isTargetAdvertisingCampaign);
-
     if (isTargetAdvertisingCampaign) {
       advertisingCampaign.classList.remove('hidden-element');
     } else {

@@ -8,11 +8,43 @@
   </head>
   <body>
     <main>
+      <div class="d-flex gap-8 flex-wrap pt-16 js-statuses-list">
+        <div class="form-group filter-item__list-btn d-flex">
+          <input checked="" type="radio" id="all" name="status" value="" class="form-control d-none" />
+          <label for="all" class="text-size-16 py-11 px-20">Всі</label>
+        </div>
+        <div class="form-group filter-item__list-btn d-flex">
+          <input type="radio" id="active" name="status" value="active" class="form-control d-none" />
+          <label for="active" class="text-size-16 py-11 px-20">Активний</label>
+        </div>
+        <div class="form-group filter-item__list-btn d-flex">
+          <input type="radio" id="inactive" name="status" value="inactive" class="form-control d-none" />
+          <label for="inactive" class="text-size-16 py-11 px-20">Нективний</label>
+        </div>
+      </div>
+      <p>-------------------------------------------------------------</p>
+      <p>Торгова марка</p>
       <div class="d-flex flex-column gap-16 js-accordion-wrapper pt-16">
         <div class="form-group filter-item__search">
-          <input type="search" placeholder="Нужно допилить js..." class="form-control js-advertising-campaigns-search-input" />
+          <input type="search" placeholder="Пошук..." class="form-control js-trade-mark-search-input" />
         </div>
-        <div class="d-flex gap-16 flex-column js-advertising-campaigns-search-list">
+        <div class="d-flex gap-16 flex-column js-trade-mark-search-list">
+          <div class="form-group filter-item__input d-flex gap-12 js-trade-mark">
+            <input type="checkbox" id="tm_id1" name="tm[]" value="1" class="form-control d-none" />
+            <label for="tm_id1" class="text-size-16 text-lighter js-trade-mark-name">Наша ряба</label>
+          </div>
+          <div class="form-group filter-item__input d-flex gap-12 js-trade-mark">
+            <input type="checkbox" id="tm_id2" name="tm[]" value="2" class="form-control d-none" />
+            <label for="tm_id2" class="text-size-16 text-lighter js-trade-mark-name">Тестовий бренд 2</label>
+          </div>
+        </div>
+      </div>
+      <p>-------------------------------------------------------------</p>
+      <div class="d-flex flex-column gap-16 js-accordion-wrapper pt-16">
+        <div class="form-group filter-item__search">
+          <input type="search" placeholder="Пошук..." class="form-control js-advertising-campaigns-search-input" />
+        </div>
+        <div class="d-flex gap-16 flex-column">
           <div class="form-group filter-item__input d-flex gap-12 js-advertising-campaign">
             <input type="checkbox" id="ac_id1" name="ac[]" value="1" class="form-control d-none" />
             <label for="ac_id1" class="text-size-16 text-lighter js-advertising-campaign-name">Весенняя рекламная кампания</label>
