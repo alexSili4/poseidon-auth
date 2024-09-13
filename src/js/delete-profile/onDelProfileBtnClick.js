@@ -1,10 +1,16 @@
 import hideDelProfileModalWin from './hideDelProfileModalWin';
+import fetchDelProfile from './fetchDelProfile';
+import refs from './refs';
 
 const onDelProfileBtnClick = (e) => {
   e.currentTarget.blur();
 
-  console.log('delete profile');
-  // TODO: after del Profile
+  const { name: tokenName, value: tokenValue } = refs.csrfTokenInput;
+  const delProfileData = {
+    [tokenName]: tokenValue,
+  };
+  fetchDelProfile(delProfileData);
+
   window.removeEventListener('keydown', hideDelProfileModalWin);
 };
 

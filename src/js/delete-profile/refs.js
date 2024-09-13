@@ -5,6 +5,7 @@ const refs = {
   cancelDelProfileBtn: document.querySelector('.js-cancel-delete-profile-btn'),
   delProfileModalWinCloseBtn: document.querySelector('.js-delete-profile-modal-win-close-btn'),
   delProfileModalWinBackdrop: document.querySelector('.js-delete-profile-backdrop'),
+  csrfTokenInput: document.querySelector('.js-sign-in-form-csrf-token > input'),
 };
 
 export default refs;
